@@ -1,0 +1,99 @@
+@import "tailwindcss";
+
+@layer base {
+  button {
+    cursor: pointer;
+  }
+}
+
+@layer components {
+  .card-active {
+    @apply border-2 border-orange-700;
+  }
+
+  .card {
+    @apply grid grid-rows-[minmax(0,220px)_1fr] sm:grid-rows-[minmax(250px,280px)_1fr] md:grid-rows-[minmax(0,210px)_1fr] lg:grid-rows-[minmax(0,180px)_1fr] gap-8;
+  }
+
+  .card-header {
+    @apply relative bg-cover bg-center rounded-xl;
+  }
+
+  .btn-addToCart {
+    @apply bg-white py-2.5 px-6 border-[1.4px] border-rose-950 rounded-full flex lg:justify-center gap-2 lg:w-[70%] absolute left-1/2 -translate-x-1/2 -bottom-5 hover:border-rose-700;
+  }
+
+  .addtocart {
+    @apply font-semibold text-rose-950 text-[0.93rem] group-hover:text-rose-700 pointer-events-none;
+  }
+
+  .btn-decrement,
+  .btn-increment {
+    @apply p-1 w-6 h-6 flex  justify-center lg:w-5 lg:h-5 border-[1.35px] border-white rounded-full hover:bg-white;
+  }
+
+  .btn-addMenu-container {
+    @apply bg-orange-600 py-2.5 px-3.5 rounded-full flex items-center gap-9 absolute left-1/2 -translate-x-1/2 -bottom-5;
+  }
+
+  .total-item {
+    @apply text-sm font-semibold text-white;
+  }
+
+  .item-category {
+    @apply text-[0.9rem] text-rose-950/60;
+  }
+
+  .item-name {
+    @apply font-semibold text-[1.05rem];
+  }
+
+  .item-price {
+    @apply font-semibold text-rose-800;
+  }
+
+  .cart-item {
+    @apply border-b border-b-rose-100 py-3.5 flex items-center justify-between;
+  }
+
+  .item-in-cart-name,
+  .order-item-name {
+    @apply text-[0.95rem] font-semibold text-rose-950 mb-1;
+  }
+
+  .item-in-cart-total,
+  .order-item-total {
+    @apply text-[0.92rem] text-orange-700 font-semibold;
+  }
+
+  .item-in-cart-price,
+  .order-item-price {
+    @apply text-[#b9a5a1] font-[500];
+  }
+
+  .item-in-cart-total-price {
+    @apply text-[#a1908c] font-semibold;
+  }
+
+  .order-item-total-price {
+    @apply text-[#706765];
+  }
+
+  .btn-cancel {
+    @apply p-[0.2rem] border-[1.4px] border-[#CAAFA7] rounded-full hover:border-black;
+  }
+
+  .order-item-container {
+    @apply grid grid-cols-[75px_1fr_1fr] items-center py-6 border-b border-b-rose-100;
+  }
+
+  #cartList,
+  .purchased-orders-list {
+    scrollbar-width: thin;
+    scroll-padding-left: 20px;
+  }
+
+  .order-confirm-display {
+    @apply bg-[#fbfaf9] px-6 pt-10 pb-6 absolute left-0 bottom-0 min-w-full rounded-t-xl sm:min-w-0 sm:w-2xl sm:left-1/2 sm:-translate-x-1/2 md:max-h-fit md:rounded-b-xl md:top-1/2 md:-translate-y-1/2;
+  }
+}
