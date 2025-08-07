@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Product List With Card Main</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Fraunces:ital,opsz,wght@0,9..144,100..900;1,9..144,100..900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Outfit:wght@100..900&family=Quicksand:wght@300..700&family=Raleway:ital,wght@0,100..900;1,100..900&family=Red+Hat+Text:ital,wght@0,300..700;1,300..700&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- TailwindCSS -->
+
+    <!-- My Own JS -->
+    <script type="module" crossorigin src="/product-list-with-cart/assets/index-h84KeXfw.js"></script>
+    <link rel="stylesheet" crossorigin href="/product-list-with-cart/assets/index-JzOXq7YN.css">
+  </head>
+  <body class="font-['Red_Hat_Text'] bg-rose-50/50">
+    <main
+      class="px-5.5 py-6 sm:p-15 md:p-10 lg:relative lg:px-18 lg:grid lg:grid-rows-[70px_80%] lg:grid-cols-[70%_30%] lg:gap-x-10"
+    >
+      <h1 class="text-4xl font-bold mb-8 lg:mb-0">Desserts</h1>
+      <div
+        class="card-container grid gap-5 md:gap-y-6.5 md:grid-cols-2 lg:grid-cols-3"
+      ></div>
+
+      <div
+        class="cart bg-white py-6 mt-7 rounded-lg md:max-w-xl md:mx-auto lg:mx-0 lg:mt-0 lg:row-start-1 lg:row-end-3 lg:col-start-2 lg:h-fit"
+      >
+        <div class="cart-header mx-4.5">
+          <h2 class="text-2xl font-bold text-orange-700">
+            Your Cart (<span id="totalItem">0</span>)
+          </h2>
+        </div>
+        <div class="empty-cart-display pb-10">
+          <img
+            src="/product-list-with-cart/images/illustration-empty-cart.svg"
+            alt="empty card illustration"
+            class="mx-auto mt-6"
+          />
+          <p
+            class="text-rose-950/60 text-[0.95rem] font-semibold text-center mt-2.5"
+          >
+            Your added items will appear here
+          </p>
+        </div>
+
+        <div class="field-cart-display mt-3 px-1 hidden">
+          <ul id="cartList" class="max-h-100 px-4.5 overflow-auto"></ul>
+          <div
+            class="total-order py-5.5 mx-4.5 flex justify-between items-center"
+          >
+            <span class="font-[500] text-rose-950">Order Total</span>
+            <strong class="total-price text-2xl">$46.50</strong>
+          </div>
+
+          <div
+            class="carbon-neutral-box mx-4.5 bg-rose-50/90 py-3 px-5 rounded-lg"
+          >
+            <p class="flex items-center gap-2 justify-center">
+              <img
+                src="/product-list-with-cart/images/icon-carbon-neutral.svg"
+                alt="carbon neutral icon"
+                T
+              />
+              <span class="text-sm"
+                >This is a <strong>carbon-neutral</strong> delievery</span
+              >
+            </p>
+          </div>
+
+          <button
+            class="btn-confirm bg-orange-600 text-white/90 py-4 lg:py-3.5 rounded-full mx-4.5 w-[90%] font-[500] mt-5 hover:bg-orange-800 active:bg-orange-900"
+          >
+            Confirm Order
+          </button>
+        </div>
+      </div>
+
+      <div
+        class="overlay fixed inset-0 min-h-screen min-w-full bg-black/60 hidden"
+      ></div>
+
+      <div class="order-confirm-display hidden">
+        <div>
+          <img
+            src="/product-list-with-cart/images/icon-order-confirmed.svg"
+            alt="order confirmed icon"
+            class="w-13"
+          />
+          <h2 class="text-5xl font-bold mt-6.5 mb-1.5">Order Confirmed</h2>
+          <p class="text-rose-950/70 mb-5 text-lg font-[500]">
+            We hope you enjoy your food!
+          </p>
+        </div>
+
+        <div class="ordered-items bg-[#FFF7F3] rounded-xl">
+          <ul class="purchased-orders-list px-6 max-h-100 overflow-auto"></ul>
+
+          <div class="ordered-total p-6 flex justify-between items-center">
+            <span class="text-rose-950 font-[500]">Order Total</span>
+            <strong class="total-order-price text-[1.65rem]">$46.50</strong>
+          </div>
+        </div>
+
+        <button
+          class="btn-new-order min-w-full mt-7.5 md:text-lg bg-orange-600 py-4.5 text-white/90 font-[500] rounded-full hover:bg-orange-800 active:bg-orange-900"
+        >
+          Start New Order
+        </button>
+      </div>
+    </main>
+  </body>
+</html>
